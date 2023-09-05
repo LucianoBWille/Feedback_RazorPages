@@ -1,0 +1,44 @@
+@page
+@model FeedbackClientes.RazorPages.Pages.Feedbacks.Create
+
+<h1>Criar Feedback</h1>
+
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-dange"></div>
+            <input type="hidden" asp-for="FeedbackModel.IdFeedback"/>
+            <div class="form-group">
+                <label asp-for="FeedbackModel.NomeCliente"></label>
+                <input asp-for="FeedbackModel.NomeCliente" class="form-control" />
+                <span asp-validation-for="FeedbackModel.NomeCliente" class="text-dange"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeedbackModel.EmailCliente"></label>
+                <input asp-for="FeedbackModel.EmailCliente" class="form-control"></textarea>
+                <span asp-validation-for="FeedbackModel.EmailCliente" class="text-dange"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeedbackModel.DataFeedback"></label>
+                <input asp-for="FeedbackModel.DataFeedback" type="date" class="form-control" />
+                <span asp-validation-for="FeedbackModel.DataFeedback" class="text-dange"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeedbackModel.Comentário"></label>
+                <input asp-for="FeedbackModel.Comentário" class="form-control"></textarea>
+                <span asp-validation-for="FeedbackModel.Comentário" class="text-dange"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeedbackModel.Avaliação"></label>
+                <input asp-for="FeedbackModel.Avaliação" type="number" class="form-control" />
+                <span asp-validation-for="FeedbackModel.Avaliação" class="text-dange"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Salvar"/>
+                <a asp-page="/Feedbacks/Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

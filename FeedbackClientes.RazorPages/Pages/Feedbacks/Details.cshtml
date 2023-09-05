@@ -1,0 +1,14 @@
+@page "{id:int}"
+@model FeedbackClientes.RazorPages.Pages.Feedbacks.Details
+
+<h1>Detalhes do Feedback</h1>
+
+<div>
+    <p><strong>Nome do cliente:</strong> @Model.FeedbackModel.NomeCliente</p>
+    <p><strong>Email do Cliente:</strong> @Model.FeedbackModel.EmailCliente</p>
+    <p><strong>Data do Feedback:</strong> @Model.FeedbackModel.DataFeedback</p>
+    <p><strong>Comentário:</strong> @Model.FeedbackModel.Comentário</p>
+    <p><strong>Avaliação:</strong> @Model.FeedbackModel.Avaliação</p>
+</div>
+
+<a asp-page="Index">Voltar para a lista</a>
